@@ -376,20 +376,19 @@ footer p {
 
 .fortune-box {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 40px;
-}
-
-.gypsytitle{
-    display: flex;
-    flex-direction: center;
-    font-size: 50px;
-    align-items: center;
+    z-index: 2;
+    position: absolute;
+    top:30%;
+    left: 16%;
 }
 
 .fortune-pic {
-    width: 450px;
+    width: 20%;
     cursor: wait;
 }
 
@@ -397,7 +396,6 @@ footer p {
 
     font-size: 30px;
     text-align: center;
-    
     border-width: 20px;
     border-style: ridge;
     border-color: #000000;
@@ -406,8 +404,6 @@ footer p {
     
 }
 
-.btnfortune {
-    
-    background-color: green;
-
+.btnfortune { 
+    flex-wrap: wrap;
 }
