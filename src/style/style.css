@@ -1,0 +1,23 @@
+main {
+    height: 35rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advice-card {
+    background-color: aquamarine;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 20%;
+}
+
+
+.ball-img {
+    cursor: pointer;
+    background-color: aquamarine;
+}
