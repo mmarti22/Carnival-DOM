@@ -1,23 +1,38 @@
-main {
-    height: 35rem;
+.fortune-box {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.gypsytitle{
+    display: flex;
+    flex-direction: center;
+    font-size: 50px;
+    align-items: center;
+}
+
+.fortune-pic {
+    width: 450px;
+    cursor: wait;
 }
 
 .advice-card {
-    background-color: aquamarine;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    margin-top: 20%;
+
+    font-size: 30px;
+    text-align: center;
+    
+    border-width: 20px;
+    border-style: ridge;
+    border-color: #000000;
+    width: 600px;
+    height: 400px;
+    
 }
 
+.btnfortune {
+    
+    background-color: green;
 
-.ball-img {
-    cursor: pointer;
-    background-color: aquamarine;
 }
+

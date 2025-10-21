@@ -2,7 +2,7 @@
 const url= "https://api.adviceslip.com/advice";
 
 const adviceText = document.getElementById('adviceText');
-const adviceBtn = document.getElementById('ball-img');
+const adviceBtn = document.getElementById('fortuneBtn');
 
 async function getAdvice() {
     const res = await fetch(`${url}?timestamp=${Date.now()}`);
