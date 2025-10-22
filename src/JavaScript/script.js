@@ -1,92 +1,94 @@
-const mesa = document.getElementById('mesa');
-const mensaje = document.getElementById('mensaje');
-const botonJugar = document.getElementById('jugar');
-const contador = document.getElementById('contador');
-const botonMusica = document.getElementById('botonMusica');
-const musica = document.getElementById('musicaFondo');
+const tableTrickster = document.getElementById('tableTrickster');
+const messageTrickster  = document.getElementById('messageTrickster');
+const buttonPlayTrickster = document.getElementById('playTrickster');
+const counterTrickster = document.getElementById('counterTrickster');
+const buttonMusicTrickster = document.getElementById('buttonMusicTrickster');
+const musicTrickster = document.getElementById('musicTricksterBackground');
 
-let cartas = [];
-let indiceJoker = null;
-let jugable = false;
-let turno = 1;
-let musicaActiva = false;
+let cards = [];
+let indexJoker = null;
+let playable = false;
+let turn = 1;
+let musicActive = false;
 
-const simbolos = ['♥️', '♣️', '♦️', '♠️', '🃏'];
-botonMusica.addEventListener('click', () => {
-  if (!musicaActiva) {
-    musica.play();
-    musicaActiva = true;
-    botonMusica.textContent = '🔇 Mute';
+const symbols = ['♥️', '♣️', '♦️', '♠️', '🃏'];
+
+buttonMusicTrickster.addEventListener('click', () => {
+  if (!musicActive) {
+    musicTricksterBackground.play();
+    musicActive = true;
+    buttonMusicTrickster.textContent = '🔇 Mute';
   } else {
-    musica.pause();
-    musicaActiva = false;
-    botonMusica.textContent = '🎵 Music';
+    musicTricksterBackground.pause();
+    musicActive = false;
+    buttonMusicTrickster.textContent = '🎵 Music';
   }
 });
-function actualizarContador() {
-  contador.textContent = `Round: ${turno} / 5`;
+
+function updateCounterTrickster() {
+  counterTrickster.textContent = `Round: ${turn} / 5`;
 }
 
-function crearCartas() {
-  mesa.innerHTML = '';
-  cartas = [];
+function createCards() {
+  tableTrickster.innerHTML = '';
+  cards = [];
 
-  const baraja = simbolos.slice(0, 4);
-  const posicionJoker = Math.floor(Math.random() * 5);
-  baraja.splice(posicionJoker, 0, '🃏');
-  indiceJoker = posicionJoker;
+  const deck = symbols.slice(0, 4);
+  const positionJoker = Math.floor(Math.random() * 5);
+  deck.splice(positionJoker, 0, '🃏');
+  indexJoker = positionJoker;
 
   for (let i = 0; i < 5; i++) {
     const carta = document.createElement('div');
-    carta.classList.add('carta');
+    carta.classList.add('card-trickster');
     carta.dataset.indice = i;
 
     const inner = document.createElement('div');
     inner.classList.add('inner');
 
-    const dorso = document.createElement('div');
-    dorso.classList.add('dorso');
+    const back = document.createElement('div');
+    back.classList.add('back');
 
-    const cara = document.createElement('div');
-    cara.classList.add('cara');
-    cara.textContent = baraja[i];
+    const side = document.createElement('div');
+    side.classList.add('side');
+    side.textContent = deck[i];
 
-    inner.appendChild(dorso);
-    inner.appendChild(cara);
+    inner.appendChild(back);
+    inner.appendChild(side);
     carta.appendChild(inner);
-    mesa.appendChild(carta);
-    cartas.push(carta);
+    tableTrickster.appendChild(carta);
+    cards.push(carta);
 
-    carta.addEventListener('click', () => seleccionarCarta(i));
+    carta.addEventListener('click', () => selectCard(i));
   }
 }
 
-async function mostrarJokerAntes() {
-  mensaje.textContent = '👀 Look where is the Joker...';
-  cartas.forEach(c => c.classList.add('revelada'));
+async function showJokerBefore() {
+  messageTrickster.textContent = '👀 Look where is the Joker...';
+  cards.forEach(c => c.classList.add('revealed'));
   await sleep(1500);
-  cartas.forEach(c => c.classList.remove('revelada'));
+  cards.forEach(c => c.classList.remove('revealed'));
 }
 
-async function mezclarCartas() {
-  jugable = false;
-  mensaje.textContent = '🔄 Shuffling the cards...';
+async function shuffleCards() {
+  playable = false;
+  messageTrickster.textContent = '🔄 Shuffling the cards...';
 
   for (let i = 0; i < 3; i++) {
-    await intercambioVisible(i);
+    await visibleExchange(i);
   }
 
-  mensaje.textContent = '👉 Choose a card';
-  jugable = true;
+  messageTrickster.textContent = '👉 Choose a card';
+  playable = true;
 }
 
-async function intercambioVisible(vuelta) {
+async function visibleExchange(vuelta) {
 
   const a = vuelta % 2 === 0 ? 1 : 2;
   const b = a + 1;
 
-  const c1 = cartas[a];
-  const c2 = cartas[b];
+  const c1 = cards[a];
+  const c2 = cards[b];
 
   const pos1 = c1.getBoundingClientRect();
   const pos2 = c2.getBoundingClientRect();
@@ -104,49 +106,49 @@ async function intercambioVisible(vuelta) {
   c1.style.transform = '';
   c2.style.transform = '';
 
-  const temp = cartas[a];
-  cartas[a] = cartas[b];
-  cartas[b] = temp;
+  const temp = cards[a];
+  cards[a] = cards[b];
+  cards[b] = temp;
 
-  if (indiceJoker === a) indiceJoker = b;
-  else if (indiceJoker === b) indiceJoker = a;
+  if (indexJoker === a) indexJoker = b;
+  else if (indexJoker === b) indexJoker = a;
 
   await sleep(400);
 }
 
-function seleccionarCarta(i) {
-  if (!jugable) return;
-  jugable = false;
+function selectCard(i) {
+  if (!playable) return;
+  playable = false;
 
-  const cartaSeleccionada = cartas[i];
-  cartaSeleccionada.classList.add('revelada');
+  const cardseleccionada = cards[i];
+  cardseleccionada.classList.add('revealed');
 
   setTimeout(() => {
-    if (i === indiceJoker) {
-      mensaje.textContent = '🎉 ¡Correct! ¡You found the Joker! 🃏';
+    if (i === indexJoker) {
+      messageTrickster.textContent = '🎉 ¡Correct! ¡You found the Joker! 🃏';
     } else {
-      mensaje.textContent = '❌ Miss. The Joker was here 👉';
-      cartas[indiceJoker].classList.add('revelada');
+      messageTrickster.textContent = '❌ Miss. The Joker was here 👉';
+      cards[indexJoker].classList.add('revealed');
     }
-    actualizarTurno();
+    updateShift();
   }, 800);
 }
 
-function actualizarTurno() {
-  turno++;
-  if (turno > 5) turno = 1;
-  actualizarContador();
+function updateShift() {
+  turn++;
+  if (turn > 5) turn = 1;
+  updateCounterTrickster();
 }
 
 function sleep(ms) {
   return new Promise(res => setTimeout(res, ms));
 }
 
-botonJugar.addEventListener('click', async () => {
-  crearCartas();
-  await mostrarJokerAntes();
-  await mezclarCartas();
+buttonPlayTrickster.addEventListener('click', async () => {
+  createCards();
+  await showJokerBefore();
+  await shuffleCards();
 });
 
-actualizarContador();
-crearCartas();
+updateCounterTrickster();
+createCards();
