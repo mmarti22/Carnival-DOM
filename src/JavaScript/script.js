@@ -1,5 +1,5 @@
 const tableTrickster = document.getElementById('tableTrickster');
-const messageTrickster  = document.getElementById('messageTrickster');
+const messageTrickster = document.getElementById('messageTrickster');
 const buttonPlayTrickster = document.getElementById('playTrickster');
 const counterTrickster = document.getElementById('counterTrickster');
 const buttonMusicTrickster = document.getElementById('buttonMusicTrickster');
@@ -83,10 +83,13 @@ async function shuffleCards() {
 }
 
 async function visibleExchange(vuelta) {
-  const totalCards = 5
-  const a = (vuelta * 2) % totalCards;
-  const b = (a + 1) % totalCards;
+  const totalCards = 5;
 
+  const a = Math.floor(Math.random() * totalCards);
+  const b = Math.floor(Math.random() * totalCards);
+  while (b === a) {
+    b = Math.floor(Math.random() * totalCards);
+  }
   const c1 = cards[a];
   const c2 = cards[b];
 
