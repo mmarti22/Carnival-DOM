@@ -83,9 +83,9 @@ async function shuffleCards() {
 }
 
 async function visibleExchange(vuelta) {
-
-  const a = vuelta % 2 === 0 ? 1 : 2;
-  const b = a + 1;
+  const totalCards = 5
+  const a = (vuelta * 2) % totalCards;
+  const b = (a + 1) % totalCards;
 
   const c1 = cards[a];
   const c2 = cards[b];
