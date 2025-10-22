@@ -13,6 +13,10 @@ async function getAdvice() {
 }
 
 getAdvice()
-
-adviceBtn.addEventListener('click', getAdvice);
-
+adviceBtn.addEventListener('click', () => {
+    getAdvice()
+    adviceText.classList.remove('animate');
+    void adviceText.offsetWidth;
+    adviceText.classList.add('animate');
+    
+});    
