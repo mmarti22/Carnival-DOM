@@ -6,44 +6,34 @@
   font-style: normal;
 }
 
-
-.fortune-box {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    z-index: 1.5;
+.fortune-box-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
     position: absolute;
-    top:30%;
-    left: 25%;
+    top:35%;
+    left: 23%;
 }
 
 .fortune-pic {
-    width: 40%;
+    width: 35%;
 }
 
 .btnfortune { 
     cursor: pointer;
-    width: 15%;
     transition: 0,3;
     position: absolute;
-    
-}
-
-.btnfortune {
+    top: 55%;
+    left: 12%;
     background-color: purple; 
     color: black; 
-    padding: 10px 20px;
     border: 1px #b67cd6 solid;
-    cursor: pointer; 
     transition: background-color 1.5s ease, color 1.5s ease; 
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    width: 11%;
+    aspect-ratio: 1/1;
     font-size: 18px;
-    top: 57%;
+    z-index: 3;
 }
 
 
@@ -55,29 +45,28 @@
 
 .advice-card {
     position: absolute;
-    display: inline-block;
-    width: 650px; 
-    left: 35%;
-
+    top: 20%;
+    left: 45%;
+    width: 500px;
+   
 }
 
 .papiro-advice {
-    width: 100%;
-    height: auto;
-    display: block;
-
-}
+    max-width: 100%; 
+    z-index: 3;
+}    
 
 .advice  {
+    z-index: 4;
     position: absolute;
-    top: 50%;               
-    left: 48%;             
+    top: 40%;
+    left: 45%;
     transform: translate(-50%, -50%);
     width: 80%;
     font-family: "Quintessential";          
     text-align: center;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22px;
     color: #4b2e05;  
 }
 
