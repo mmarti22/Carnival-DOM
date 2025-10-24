@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+@import url(/src/style/style-trilero.css);
 @import url(/src/style/lucky.css);
 
 body {
@@ -14,7 +16,7 @@ nav {
     width: 100vw;
     height: 40px;
     box-shadow: 5px 8px 10px #07172B80
-}   
+}
 
 .logo {
     margin: auto 0px auto 30px;
@@ -120,7 +122,7 @@ form button {
     height: 120vh;
     width: 5%;
     background: linear-gradient(#E4D9BB, #D0A05C);
-    z-index: -1;   
+    z-index: -1;
 }
 
 .side-decor div:nth-last-of-type(4) {
@@ -131,7 +133,7 @@ form button {
     z-index: -1;
 }
 
-h2  {
+h2 {
     font-family: "Limelight", sans-serif;
     font-size: 56px;
     position: absolute;
@@ -148,7 +150,7 @@ h2  {
     box-shadow: 0px 50px 5px #07172B;
 }
 
-.banner div:nth-last-of-type(1){
+.banner div:nth-last-of-type(1) {
     background: linear-gradient(#C22127, #5C1012);
     height: 30vh;
     width: 5%;
@@ -161,7 +163,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(2){
+.banner div:nth-last-of-type(2) {
     background: linear-gradient(#E4D9BB, #D0A05C);
     height: 25vh;
     width: 5%;
@@ -174,7 +176,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(3){
+.banner div:nth-last-of-type(3) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -187,7 +189,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(4){
+.banner div:nth-last-of-type(4) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -199,7 +201,8 @@ h2  {
     box-shadow: 0px 8px #07172B;
     z-index: -1;
 }
-.banner div:nth-last-of-type(5){
+
+.banner div:nth-last-of-type(5) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -211,7 +214,8 @@ h2  {
     box-shadow: 0px 8px #07172B;
     z-index: -1;
 }
-.banner div:nth-last-of-type(6){
+
+.banner div:nth-last-of-type(6) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -224,7 +228,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(7){
+.banner div:nth-last-of-type(7) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -237,7 +241,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(8){
+.banner div:nth-last-of-type(8) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5.1%;
@@ -250,7 +254,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(9){
+.banner div:nth-last-of-type(9) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -263,7 +267,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(10){
+.banner div:nth-last-of-type(10) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -276,7 +280,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(11){
+.banner div:nth-last-of-type(11) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -289,7 +293,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(12){
+.banner div:nth-last-of-type(12) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -302,7 +306,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(13){
+.banner div:nth-last-of-type(13) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -315,7 +319,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(14){
+.banner div:nth-last-of-type(14) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
     width: 5%;
@@ -328,7 +332,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(15){
+.banner div:nth-last-of-type(15) {
     background: linear-gradient(#E4D9BB, #D0A05C);
     height: 25vh;
     width: 5%;
@@ -341,7 +345,7 @@ h2  {
     z-index: -1;
 }
 
-.banner div:nth-last-of-type(16){
+.banner div:nth-last-of-type(16) {
     background: linear-gradient(#C22127, #5C1012);
     height: 30vh;
     width: 5%;
@@ -351,7 +355,7 @@ h2  {
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     box-shadow: 0px 8px #07172B;
-    z-index: -1;   
+    z-index: -1;
 }
 
 h3 {
