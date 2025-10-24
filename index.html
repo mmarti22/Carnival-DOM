@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><Carnival-DOM></Carnival-DOM></title>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
     
+
+    <header class="scoreboard">
+
+        <div class="player-score">
+            <span class="player-socre-label">Player:</span>
+            <span class="player-socre-value">0</span>
+        </div>
+
+
+
+        <div >
+
+            <h2>Piedra, Papel y Tijera</h2>
+            <p>Vamos a Jugar!</p>
+        
+        </div>
+        
+        <div class="computer-score">
+            <span class="computer-socre-label">Computer:</span>
+            <span class="computer-socre-value">0</span>
+        </div>
+
+    </header>
+
+    <main class="game">
+
+        <section class="weapon-select">
+            <h3>Elige tu Arma!</h3>
+            <button class="weapon" data-choice="piedra">
+                <img src="images/piedra.png" alt="" height="100" width="100">
+
+            </button>
+            <button class="weapon" data-choice="papel">
+                <img src="images/mano.png" alt="" height="100" width="100">
+            </button>
+            <button class="weapon" data-choice="tijera">
+                <img src="images/tijeras.png" alt="" height="100" width="100">
+            </button>
+        </section>
+
+    </main>
+
+<script src="src/script.js"></script>
 </body>
 </html>

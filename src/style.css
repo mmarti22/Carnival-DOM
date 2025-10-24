@@ -1,0 +1,33 @@
+
+
+
+
+
+.weapon,
+.weapon:hover,
+.weapon:focus {
+  border: none;
+  background: none;
+}
+
+.weapon {
+  border-radius: 28px;
+  padding: 1.75rem;
+  background: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+.weapon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 32px rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.weapon:focus-visible {
+  outline: 0;
+  box-shadow:
+    0 0 0 4px #ffe4b5,
+    0 0 0 8px #c45f20;
+}
+
+    
