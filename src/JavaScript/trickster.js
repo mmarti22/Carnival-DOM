@@ -17,11 +17,11 @@ buttonMusicTrickster.addEventListener('click', () => {
   if (!musicActive) {
     musicTricksterBackground.play();
     musicActive = true;
-    buttonMusicTrickster.textContent = '🔇 Mute';
+    buttonMusicTrickster.textContent = 'Stop';
   } else {
     musicTricksterBackground.pause();
     musicActive = false;
-    buttonMusicTrickster.textContent = '🎵 Music';
+    buttonMusicTrickster.textContent = 'Play';
   }
 });
 

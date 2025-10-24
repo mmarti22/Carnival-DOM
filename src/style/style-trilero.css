@@ -51,7 +51,7 @@
     height: 100%;
     border-radius: 10px;
     backface-visibility: hidden;
-    border: 3px solid #ffd700;
+    border: 3px solid #D0A05C;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -71,23 +71,6 @@
     justify-content: center;
     font-size: 2em;
     transform: rotateY(180deg);
-}
-
-.button-trickster {
-    background-color: #ffd700;
-    border: none;
-    padding: 10px 25px;
-    font-size: 1em;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Cinzel Decorative', cursive;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-button:hover {
-    background-color: #ffec80;
-    transform: scale(1.05);
 }
 
 .shuffling .card {
@@ -123,27 +106,6 @@ button:hover {
     z-index: 10;
 }
 
-#buttonMusicTrickster {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    background-color: #ffd700;
-    border: 2px solid #b8860b;
-    padding: 10px 20px;
-    font-size: 1em;
-    border-radius: 8px;
-    cursor: pointer;
-    font-family: 'Cinzel Decorative', cursive;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
-    color: #3b0000;
-}
-
-#buttonMusicTrickster:hover {
-    background-color: #ffec80;
-    transform: scale(1.05);
-}
-
 .body-section-trickster{
     display: flex;
     flex-direction: column;
@@ -156,4 +118,19 @@ button:hover {
     position: absolute;
     top:30%;
     left: 16%;
+}
+
+.button-trickster {
+    background: linear-gradient(#f3edd0, #D0A05C);
+    border: none;
+    border-radius: 3px;
+    color: #000;
+    width: 20%;
+    font-family: 'Suez One', sans-serif;
+    font-weight: 100;
+}
+
+.button-trickster:hover {
+    color: #f3edd0;
+
 }
