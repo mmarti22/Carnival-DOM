@@ -3,7 +3,7 @@ const COLOR_MAP = {
   blue: "#457B9D",
   green: "#2A9D8F",
   yellow: "#E9C46A",
-  orange: "#F4A261",
+  pink: "#502e38ff",
   purple: "#9D4EDD",
 };
 
@@ -11,18 +11,6 @@ const board = document.querySelector(".memory-game");
 const cardsArray = [...Object.keys(COLOR_MAP), ...Object.keys(COLOR_MAP)].sort(
   () => Math.random() - 0.5
 );
-
-const animalsLevel1 = [ "rat", "dog", "dragon", "goat", "horse", "monkey" ];
-let cardsLevel1 = [...animalsLevel1, ...animalsLevel1].sort(() => Math.random() - 0.5);
-const animalsLevel2 = [ "rat", "dog", "dragon", "goat", "horse", "monkey", "tiger", "snake", "rabbit", "rooster", "ox", "pig" ];
-let cardsLevel2 = [...animalsLevel2, ...animalsLevel2].sort(() => Math.random() - 0.5);
-const animalsLevel3 = [ "rat", "dog", "dragon", "goat", "horse", "monkey", "tiger", "snake", "rabbit", "rooster", "ox", "pig", "cat", "elephant", "lion", "bear", "fox", "wolf" ];
-let cardsLevel3 = [...animalsLevel3, ...animalsLevel3].sort(() => Math.random() - 0.5);
-const levels = {
-  1: cardsLevel1,
-  2: cardsLevel2,
-  3: cardsLevel3
-};
 
 cardsArray.forEach((key) => {
   const card = document.createElement("div");
@@ -55,6 +43,7 @@ function flipCard() {
   this.classList.add("flip");
 
   if (!hasFlippedCard) {
+    if (!startTime) startTimer();
     hasFlippedCard = true;
     firstCard = this;
 
@@ -108,8 +97,6 @@ function resetBoard() {
 
 cards.forEach((card) => card.addEventListener("click", flipCard));
 
-// SCORE
-
 const gameboard = document.querySelector(".memory-game");
 
 const hud = document.createElement("div");
@@ -117,6 +104,7 @@ hud.className = "hud";
 hud.innerHTML = `
 <div class="hud-item">Score: <strong id="score">0</strong></div>
 <div class="hud-item">Moves: <strong id="moves">0</strong></div>
+<div class="hud-item">Time: <strong id="time">00:00</strong></div>
 <div class="hud-item">Best score: <strong id="best">-</strong></div>
 `;
 
@@ -137,6 +125,27 @@ let streak = 0;
 const MATCH_POINTS = 100;
 const STREAK_BONUS = 25;
 const FAIL_PENALTY = 20;
+
+let startTime = null;
+let timerInterval = null;
+
+function startTimer() {
+  if (timerInterval) return; 
+  startTime = Date.now();
+  timerInterval = setInterval(updateTimer, 1000);
+}
+
+function updateTimer() {
+  const elapsed = Math.floor((Date.now() - startTime) / 1000);
+  const minutes = String(Math.floor(elapsed / 60)).padStart(2, "0");
+  const seconds = String(elapsed % 60).padStart(2, "0");
+  document.getElementById("time").textContent = `${minutes}:${seconds}`;
+}
+
+function stopTimer() {
+  clearInterval(timerInterval);
+  timerInterval = null;
+}
 
 function addPointsForMatch() {
   const bonus = streak > 1 ? (streak - 1) * STREAK_BONUS : 0;
@@ -168,18 +177,17 @@ function checkWinCondition() {
       setBest(score);
       bestEl.textContent = score;
     }
-
+    stopTimer();
     showWinMessage();
   }
 }
 
 function showWinMessage() {
-  const winMessage = document.getElementById('winMessage');
-  winMessage.classList.add('show');
+  const winMessage = document.getElementById("winMessage");
+  winMessage.classList.add("show");
 
   setTimeout(() => {
-    winMessage.classList.remove('show');
+    winMessage.classList.remove("show");
     location.reload();
   }, 4000);
 }
-
