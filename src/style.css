@@ -1,6 +1,27 @@
 
 
+:root {
+  --bg: #f9eed7;
+  --card: #d8b48a;
+  --card-dark: #c09163;
+  --text-main: #3b3b3b;
+  --accent: #c0581c;
+  --score-green: #37b24d;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+}
 
 
 .weapon,
@@ -30,4 +51,168 @@
     0 0 0 8px #c45f20;
 }
 
-    
+
+
+.page {
+  width: min(960px, 100%);
+  padding: 3rem 1.5rem 4rem;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.player-score,
+.computer-score {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.player-score-label,
+.computer-score-label {
+  display: block;
+  font-weight: 600;
+  color: #6b4b2d;
+}
+
+.player-score-value,
+.computer-score-value {
+  display: block;
+  font-size: 2.75rem;
+  font-weight: 600;
+}
+
+.player-score-value {
+  color: var(--score-green);
+}
+
+.computer-score-value {
+  color: var(--accent);
+}
+
+.scoreboard h2 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--accent);
+  margin: 0;
+  text-align: center;
+}
+
+.scoreboard p {
+  margin: 0.25rem 0 0;
+  font-weight: 500;
+  text-align: center;
+}
+
+.weapon-select {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.weapon-select h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #374151;
+}
+
+.weapon-select {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.weapon-select-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.weapops {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
+.weapon,
+.weapon:hover,
+.weapon:focus {
+  border: none;
+  background: none;
+}
+
+.weapon {
+  border-radius: 28px;
+  padding: 1.75rem;
+  background: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  cursor: pointer;
+}
+
+.weapon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 32px rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.weapon:focus-visible {
+  outline: 0;
+  box-shadow:
+    0 0 0 4px #ffe4b5,
+    0 0 0 8px #c45f20;
+}
+
+.weapon img {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+}
+
+.selection {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.selection-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.player-selection-card,
+.computer-selection-card {
+  width: 160px;
+  height: 160px;
+  background: var(--card);
+  border-radius: 999px;
+  box-shadow: inset 0 4px 16px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.selection-card-title {
+  font-weight: 600;
+  color: #4b4b4b;
+}
+
+.selection-card_icon {
+  font-size: 3rem;
+}
+
+.selecton-vs {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #5b5b5b;
+}
+
