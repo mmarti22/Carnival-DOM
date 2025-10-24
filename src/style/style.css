@@ -32,9 +32,6 @@ h1 {
 
 /*Music Button*/
 #buttonMusicTrickster {
-  position: absolute;
-  top: 20px;
-  right: 25px;
   background-color: #FFD700;
   border: 2px solid #B8860B;
   padding: 10px 20px;
