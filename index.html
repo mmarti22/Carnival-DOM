@@ -20,6 +20,11 @@
         <nav>
             <img class="logo" src="./src/assets/img/logo-carnival-games.png">
             <h1>CARNIVAL GAMES</h1>
+            <button id="buttonMusicTrickster">Play</button>
+            <audio id="musicTricksterBackground" loop>
+                <source src="/src/assets/music/index-music.mp3"
+                    type="audio/mpeg">
+            </audio>
             <form>
                 <p>Keep your score: </p>
                 <input type="text" placeholder="Introduce your name!" id="nameInput" />
@@ -63,8 +68,8 @@
         <h3>Try our games!</h3>
         <section class="gamesgallery">
             <article>
-                <img src="./src/assets/img/img-placeholder.png">
-                <h4>Try your fortune with the Gypsy!</h4>
+                <a href="./src/pages/luckygame.html"><img src="./src/assets/img/img-placeholder.png"></a>
+                <a href="./src/pages/luckygame.html"><h4>Try your fortune with the Gypsy!</h4></a>
             </article>
             <article>
                 <img src="./src/assets/img/img-placeholder.png">
@@ -100,6 +105,7 @@
             <p>text</p>
         </article>
     </footer>
+    <script src="/src/JavaScript/index.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
 @import url(/src/style/style-trilero.css);
+@import url(/src/style/lucky.css);
 
-body{
+body {
     font-family: "Suez One", serif;
     color: #F1E2B7;
     background-image: linear-gradient(#063876, #07172B 40%);
-    height: 100%;
+    height: 200%;
     margin: 0;
 }
 
@@ -31,7 +32,38 @@ h1 {
     font-weight: 100;
 }
 
-form {
+/*Music Button*/
+#buttonMusicTrickster {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid #F1E2B7;
+    border-right: none;
+    cursor: pointer;
+    transition:0.3 ease;
+    background: none;
+    margin: auto;
+    margin-left: 10px;
+    color: #F1E2B7;
+    font-family: "Suez One", serif;
+    text-align: start;
+    padding: auto;
+    vertical-align: text-top;
+}
+
+#buttonMusicTrickster:hover {
+    transform: scale(1.05);
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 11x solid transparent;
+    border-left: 19px solid #D0A05C;
+    border-right: none;
+    background: none;
+}
+
+form{
     margin-left: auto;
     margin-right: 50px;
     margin-top: 5px;
@@ -41,6 +73,7 @@ form {
     width: fit-content;
     height: 24px;
     border-radius: 5px;
+
 }
 
 form p {
@@ -70,7 +103,7 @@ form button {
 }
 
 .side-decor div:nth-last-of-type(1) {
-    height: 100vh;
+    height: 120vh;
     width: 5%;
     background: linear-gradient(#C22127, #5C1012);
     z-index: -1;
@@ -78,7 +111,7 @@ form button {
 
 .side-decor div:nth-last-of-type(2) {
     justify-self: star;
-    height: 100vh;
+    height: 120vh;
     width: 5%;
     background: linear-gradient(#E4D9BB, #D0A05C);
     margin-left: auto;
@@ -86,7 +119,7 @@ form button {
 }
 
 .side-decor div:nth-last-of-type(3) {
-    height: 100vh;
+    height: 120vh;
     width: 5%;
     background: linear-gradient(#E4D9BB, #D0A05C);
     z-index: -1;
@@ -94,7 +127,7 @@ form button {
 
 .side-decor div:nth-last-of-type(4) {
     justify-self: star;
-    height: 100vh;
+    height: 120vh;
     width: 5%;
     background: linear-gradient(#C22127, #5C1012);
     z-index: -1;
@@ -360,12 +393,13 @@ footer {
     justify-content: space-around;
     flex-wrap: nowrap;
     margin: auto;
-    padding: 3vh;
-}
+    padding: 2vh;
+    
+}  
 
 footer h5 {
-    margin-top: 10vh;
-    padding: 3vh auto;
+    margin-top: 5vh;
+    padding: 2vh auto;
     font-size: 18px;
     font-weight: 100;
 }

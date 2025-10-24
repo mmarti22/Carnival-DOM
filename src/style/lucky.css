@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+
+.quintessential-regular {
+  font-family: "Quintessential", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fortune-box-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    position: absolute;
+    top:35%;
+    left: 23%;
+}
+
+.fortune-pic {
+    width: 35%;
+}
+
+.btnfortune { 
+    cursor: pointer;
+    transition: 0,3;
+    position: absolute;
+    top: 55%;
+    left: 12%;
+    background-color: purple; 
+    color: black; 
+    border: 1px #b67cd6 solid;
+    transition: background-color 1.5s ease, color 1.5s ease; 
+    border-radius: 50%;
+    width: 11%;
+    aspect-ratio: 1/1;
+    font-size: 18px;
+    z-index: 3;
+}
+
+
+.btnfortune:hover {
+    background-color: rgb(233, 133, 233); 
+    color: white; 
+    border: 1px solid gold;
+}
+
+.advice-card {
+    position: absolute;
+    top: 20%;
+    left: 45%;
+    width: 500px;
+   
+}
+
+.papiro-advice {
+    max-width: 100%; 
+    z-index: 3;
+}    
+
+.advice  {
+    z-index: 4;
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    font-family: "Quintessential";          
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    color: #4b2e05;  
+}
+
+.animate {
+    animation: focus-in-expand 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+
+@-webkit-keyframes focus-in-expand {
+        0% {
+        letter-spacing: -0.5em;
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+
