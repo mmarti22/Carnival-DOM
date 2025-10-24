@@ -146,3 +146,5 @@
   background-color: #ffec80;
   transform: scale(1.05);
 }
+#tableTrickster { position: relative; /* contenedor para coords absolutas */ }
+.card-trickster { width: 90px; height: 140px; display: inline-block; user-select: none; }

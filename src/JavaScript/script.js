@@ -59,7 +59,10 @@ function createCards() {
     tableTrickster.appendChild(carta);
     cards.push(carta);
 
-    carta.addEventListener('click', () => selectCard(i));
+   carta.addEventListener('click', (e) => {
+  const index = Number(e.currentTarget.dataset.indice);
+  selectCard(index);
+});
   }
 }
 
@@ -86,9 +89,9 @@ async function visibleExchange(vuelta) {
   const totalCards = 5;
 
   const a = Math.floor(Math.random() * totalCards);
-  const b = Math.floor(Math.random() * totalCards);
+  let b = Math.floor(Math.random() * totalCards);
   while (b === a) {
-    b = Math.floor(Math.random() * totalCards);
+  b = Math.floor(Math.random() * totalCards);
   }
   const c1 = cards[a];
   const c2 = cards[b];
@@ -112,6 +115,8 @@ async function visibleExchange(vuelta) {
   const temp = cards[a];
   cards[a] = cards[b];
   cards[b] = temp;
+  cards[a].dataset.indice = a;
+cards[b].dataset.indice = b;
 
   if (indexJoker === a) indexJoker = b;
   else if (indexJoker === b) indexJoker = a;
