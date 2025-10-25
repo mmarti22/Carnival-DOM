@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
-@import url(/src/style/style-trilero.css);
 @import url(/src/style/lucky.css);
+@import url(/src/style/tickster.css);
+
 @import url(/src/style/shooter.css);
+
 
 body {
     font-family: "Suez One", serif;
@@ -15,8 +17,20 @@ nav {
     display: flex;
     background-color: #1F1F1F;
     width: 100vw;
-    height: 40px;
+    height: 50px;
     box-shadow: 5px 8px 10px #07172B80
+}
+nav a { 
+    display: flex;
+    color: #F1E2B7;
+    text-decoration: none;
+}
+
+
+nav a:hover{
+    color: #D0A05C;
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #F1E2B740;
 }
 
 .logo {
@@ -25,17 +39,24 @@ nav {
     max-height: 18px;
     width: auto;
     height: auto;
+    cursor: pointer;
 }
 
 h1 {
     margin: auto 5px auto;
     font-size: 16px;
     font-weight: 100;
+    cursor: pointer;
+}
+
+hr {
+    margin: 5px 10px;
+    border: 1px solid #383838;
 }
 
  /* Music Button */
 
-#buttonMusicTrickster {
+ #buttonMusicTrickster {
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
@@ -43,39 +64,58 @@ h1 {
     border-left: 18px solid #F1E2B7;
     border-right: none;
     cursor: pointer;
-    transition:0.3 ease;
     background: none;
     margin: auto;
     margin-left: 10px;
     color: #F1E2B7;
-    font-family: "Suez One", serif;
-    text-align: start;
-    padding: auto;
-    vertical-align: text-top;
-}
+    transition:0.3s ease;
+ }
 
-#buttonMusicTrickster:hover {
-    transform: scale(1.05);
+
+ .buttonMusicTrickster {
     width: 0;
     height: 0;
-    border-top: 11px solid transparent;
-    border-bottom: 11x solid transparent;
-    border-left: 19px solid #D0A05C;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 18px solid #F1E2B7;
     border-right: none;
+    cursor: pointer;
     background: none;
+    margin: auto;
+    margin-left: 10px;
+    color: #F1E2B7;
+    transition:0.3s ease;
+ }
+
+.buttonTrickster {
+    transform: scale(1.08);
+    transition:0.3s ease;
+    width: 15px;
+    height: 15px;
+    background-color: #F1E2B7;
+    margin: auto;
+    margin-left: 10px;
+    border: none;
 }
+
+
+#buttonMusicText {
+    margin: auto 0;
+}
+
+
 
 form{
     margin-left: auto;
     margin-right: 50px;
-    margin-top: 5px;
+    margin-top:auto;
+    margin-bottom: auto;
     background-color: #383838;
     align-items: center;
     display: flex;
     width: fit-content;
-    height: 24px;
+    height: 30px;
     border-radius: 5px;
-
 }
 
 form p {
@@ -88,6 +128,7 @@ form input {
     font-size: 12px;
     border-radius: 5px;
     padding-left: 5px;
+    width: 120px;
 }
 
 form button {
@@ -379,13 +420,34 @@ h3 {
     position: absolute;
     top: 50%;
     left: 16%;
-    font-weight: 100;;
 }
 
 
 .gamesgallery img {
     max-width: 12vw;
     width: auto;
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px #000000;
+}
+
+.gamesgallery img:hover {
+    box-shadow: 0px 0px 20px #F1E2B760;
+    transform: scale(1.08);
+    transition: 0.2s ease;
+
+}
+ 
+.gamesgallery h4 {
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.gamesgallery h4:hover {
+    text-shadow: 0px 0px 20px #F1E2B780;
+}
+.gamesgallery a {
+    text-decoration: none;
+    color: #F1E2B7;
 }
 
 
@@ -403,13 +465,22 @@ footer {
 footer h5 {
     margin-top: 5vh;
     padding: 2vh auto;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 100;
+}
+
+footer a {
+    text-decoration: none;
+    color: #F1E2B7;
+}
+
+footer a:hover {
+    color: #D0A05C;
 }
 
 footer p {
     padding: 5px auto;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 100;
 }
 

@@ -17,14 +17,18 @@
 
     <header>
         <nav>
-            <img class="logo" src="/src/">
-            <h1>CARNIVAL GAMES</h1>
+            <a href="/index.html">
+                <img class="logo" src="/src/assets/img/logo-carnival-games.png">
+                <h1>CARNIVAL GAMES</h1>
+            </a>
+            <hr>
+            <p id="buttonMusicText">Play</p>
             <button id="buttonMusicTrickster"></button>
             <audio id="musicTricksterBackground" loop>
                 <source src="/src/assets/music/index-music.mp3"
                     type="audio/mpeg">
             </audio>
-            <p>Play</p>
+
             <form>
                 <p>Keep your score: </p>
                 <input type="text" placeholder="Introduce your name!" id="nameInput" />
@@ -78,7 +82,7 @@
                     <h4>Shoot’em up!</h4>
                 </a>
             </article>
-                <a href="./src/pages/trilero.html">
+                <a href="./src/pages/trickster.html">
                 <article>
                     <img src="./src/assets/img/img-placeholder.png">
                     <h4>Find the Joker!</h4>
@@ -99,14 +103,18 @@
 
     <footer>
         <article>
-            <h5>Title</h5>
-            <p>text</p>
-            <p>text</p>
+            <h5>All Games</h5>
+            <a href="/src/pages/lucky-game.html"><p>Try your Fortune with the Gypsy!</p></a>
+            <a href="/src/pages/shooter-game.html"><p>Shoot’em Up</p></a>
+            <a href="/src/pages/trickster-game.html"><p>Find the Joker!</p></a>
+            <p>Rock, Paper Scissor</p>
+            <a href="/src/pages/memory-game.html"><p>Memory Match</p></a>
         </article>
         <article>
-            <h5>Title</h5>
-            <p>text</p>
-            <p>text</p>
+           <h5>About</h5>
+            <p>AZARGame</p>
+            <p>Developers</p>
+            <p>Contact</p>
         </article>
     </footer>
     <script src="/src/JavaScript/index.js"></script>
