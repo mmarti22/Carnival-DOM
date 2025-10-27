@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
 @import url(/src/style/lucky.css);
 @import url(/src/style/tickster.css);
-
 @import url(/src/style/shooter.css);
-
+@import url(/src/style/memory.css);
 
 body {
     font-family: "Suez One", serif;
@@ -44,9 +43,10 @@ nav a:hover{
 
 h1 {
     margin: auto 5px auto;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 100;
     cursor: pointer;
+    text-shadow: 0 0 10px #F1E2B720;
 }
 
 hr {
@@ -100,6 +100,7 @@ hr {
 
 
 #buttonMusicText {
+    font-size: 14px;
     margin: auto 0;
 }
 
@@ -178,7 +179,7 @@ form button {
 
 h2 {
     font-family: "Limelight", sans-serif;
-    font-size: 56px;
+    font-size: 58px;
     position: absolute;
     margin-inline: auto;
     top: 3%;
@@ -403,10 +404,10 @@ h2 {
 
 h3 {
     position: absolute;
-    top: 40%;
+    top: 39%;
     left: 16%;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 
@@ -424,16 +425,20 @@ h3 {
 
 
 .gamesgallery img {
-    max-width: 12vw;
-    width: auto;
+    height: 185px;
+    width: 185px;
     border-radius: 10px;
     box-shadow: 0px 8px 10px #000000;
+    object-fit: cover;
+    border: 2px ridge #D0A05C;
+    
 }
 
 .gamesgallery img:hover {
     box-shadow: 0px 0px 20px #F1E2B760;
     transform: scale(1.08);
     transition: 0.2s ease;
+    object-fit:;
 
 }
  

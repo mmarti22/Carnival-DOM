@@ -4,6 +4,7 @@ const buttonPlayTrickster = document.getElementById('playTrickster');
 const counterTrickster = document.getElementById('counterTrickster');
 const buttonMusicTrickster = document.getElementById('buttonMusicTrickster');
 const musicTrickster = document.getElementById('musicTricksterBackground');
+const buttonMusicText = document.getElementById('buttonMusicText');
 
 let cards = [];
 let indexJoker = null;
@@ -15,13 +16,18 @@ const symbols = ['♥️', '♣️', '♦️', '♠️', '🃏'];
 
 buttonMusicTrickster.addEventListener('click', () => {
   if (!musicActive) {
-    musicTricksterBackground.play();
     musicActive = true;
-    buttonMusicTrickster.textContent = 'Stop';
+    musicTrickster.play();
+    buttonMusicText.textContent = 'Stop';
+    buttonMusicTrickster.removeAttribute('id')
+    buttonMusicTrickster.classList.add('buttonTrickster');
+
   } else {
-    musicTricksterBackground.pause();
+    musicTrickster.pause();
     musicActive = false;
-    buttonMusicTrickster.textContent = 'Play';
+    buttonMusicText.textContent = 'Play';
+    buttonMusicTrickster.classList.remove('buttonTrickster');
+    buttonMusicTrickster.classList.add('buttonMusicTrickster');
   }
 });
 

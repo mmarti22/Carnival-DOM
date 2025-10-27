@@ -12,14 +12,23 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
     </style>
-    <title>Document</title>
+    <title>Lucky Game</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <img class="logo" src="/src/assets/img/logo-carnival-games.png">
-            <h1>CARNIVAL GAMES</h1>
+            <a href="/index.html"><img class="logo" src="/src/assets/img/logo-carnival-games.png">
+                <h1>Carnival Games</h1>
+            </a>
+               <hr>
+            <p id="buttonMusicText">Play</p>
+            <button id="buttonMusicTrickster"></button>
+            <audio id="musicTricksterBackground" loop>
+                <source src="/src/assets/music/gypsy-music.mp3"
+                    type="audio/mpeg">
+            </audio>
+
             <form>
                 <p>Keep your score: </p>
                 <input type="text" placeholder="Introduce your name!" id="nameInput" />
@@ -58,12 +67,12 @@
 
         <article class="fortune-box-container">
             <section class="fortune-box">
-                <img src="/src/images/gypsy.png" alt="fortune-teller" class="fortune-pic">
+                <img src="/src/assets/img/gypsy.png" alt="fortune-teller" class="fortune-pic">
                 <button class="btnfortune" id="fortuneBtn">Know your fortune! 🔮</button>
             </section>
 
             <section class="advice-card" id="advice-card2">
-                <img class="papiro-advice" src="/src/images/papiro.png">
+                <img class="papiro-advice" src="/src/assets/img/papiro.svg">
                 <p class="advice" id="adviceText">text</p>
             </section>
         </article>
@@ -72,19 +81,22 @@
 
     </main>
 
-    <footer>
+<footer>
         <article>
-            <h5>Title</h5>
-            <p>text</p>
-            <p>text</p>
+            <h5>All Games</h5>
+            <a href="/src/pages/lucky-game.html"><p>Try your Fortune with the Gypsy!</p></a>
+            <a href="/src/pages/shooter-game.html"><p>Shoot’em Up</p></a>
+            <a href="/src/pages/trickster-game.html"><p>Find the Joker!</p></a>
+            <p>Rock, Paper Scissor</p>
+            <a href="/src/pages/memory-game.html"><p>Memory Match</p></a>
         </article>
         <article>
-            <h5>Title</h5>
-            <p>text</p>
-            <p>text</p>
+           <h5>About</h5>
+            <p>AZARGame</p>
+            <p>Developers</p>
+            <p>Contact</p>
         </article>
     </footer>
-
 </body>
 <script src="/src/JavaScript/lucky-game.js"></script>
 

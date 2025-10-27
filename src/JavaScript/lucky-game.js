@@ -25,16 +25,25 @@ adviceBtn.addEventListener('click', () => {
 
 const buttonMusicTrickster = document.getElementById('buttonMusicTrickster');
 const musicTrickster = document.getElementById('musicTricksterBackground');
+const buttonMusicText = document.getElementById('buttonMusicText');
+
 let musicActive = false;
 
 buttonMusicTrickster.addEventListener('click', () => {
-    if (!musicActive) {
-        musicTricksterBackground.play();
-        musicActive = true;
-        buttonMusicTrickster.textContent = ':mute: Mute';
-    } else {
-        musicTricksterBackground.pause();
-        musicActive = false;
-        buttonMusicTrickster.textContent = ':musical_note: Music';
-    }
+  if (!musicActive) {
+    musicActive = true;
+    musicTrickster.play();
+    buttonMusicText.textContent = 'Stop';
+    buttonMusicTrickster.removeAttribute('id')
+    buttonMusicTrickster.classList.add('buttonTrickster');
+
+  } else {
+    musicTrickster.pause();
+    musicActive = false;
+    buttonMusicText.textContent = 'Play';
+    buttonMusicTrickster.classList.remove('buttonTrickster');
+    buttonMusicTrickster.classList.add('buttonMusicTrickster');
+  }
 });
+
+document.getElementById("musicTricksterBackground").volume = 0.4;
