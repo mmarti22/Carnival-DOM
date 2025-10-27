@@ -12,14 +12,14 @@ let playerScore = 0;
 let computerScore = 0;
 
 const choiceImages = {
-  piedra: 'src/img/rock.png',
-  papel: 'src/img/paper.png',
-  tijera: 'src/img/scissor.png',
+  rock: '/src/assets/img/rock.svg',
+  paper: '/src/assets/img/paper.svg',
+  scissor: '/src/assets/img/scissor.svg',
 };
 
 
 function getComputerChoice() {
-  const options = ['piedra', 'papel', 'tijera'];
+  const options = ['rock', 'paper', 'scissor'];
   const randomIndex = Math.floor(Math.random() * options.length);
   return options[randomIndex];
 }
@@ -28,9 +28,9 @@ function getRoundResult(player, computer) {
   if (player === computer) return 'tie';
 
   const winsAgainst = {
-    piedra: 'tijera',
-    papel: 'piedra',
-    tijera: 'papel',
+    rock: 'scissor',
+    paper: 'rock',
+    scissor: 'paper',
   };
 
   return winsAgainst[player] === computer ? 'player' : 'computer';
@@ -40,17 +40,17 @@ function playRound(playerChoice) {
   const computerChoice = getComputerChoice();
   const result = getRoundResult(playerChoice, computerChoice);
 
-  playerChoiceEl.innerHTML = `<img src="${choiceImages[playerChoice]}" alt="${playerChoice}" />`;
-  computerChoiceEl.innerHTML = `<img src="${choiceImages[computerChoice]}" alt="${computerChoice}" />`;
+  playerChoiceEl.innerHTML = `<img src=${choiceImages[playerChoice]}>`;
+  computerChoiceEl.innerHTML = `<img src=${choiceImages[computerChoice]}>`;
 
   if (result === 'player') {
     playerScore += 1;
-    resultMessageEl.textContent = '¡Ganaste esta ronda!';
+    resultMessageEl.textContent = '¡You won the round!';
   } else if (result === 'computer') {
     computerScore += 1;
-    resultMessageEl.textContent = 'El ordenador gana la ronda.';
+    resultMessageEl.textContent = 'CPU won the round';
   } else {
-    resultMessageEl.textContent = 'Empate.';
+    resultMessageEl.textContent = 'It´s a tie.';
   }
 
   playerScoreEl.textContent = playerScore;
@@ -71,5 +71,5 @@ resetBtn.addEventListener('click', () => {
   computerScoreEl.textContent = '0';
   playerChoiceEl.textContent = '?';
   computerChoiceEl.textContent = '🤖';
-  resultMessageEl.textContent = 'Haz tu jugada.';
+  resultMessageEl.textContent = 'Make your move!';
 });

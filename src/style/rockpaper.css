@@ -1,150 +1,75 @@
 @import url(/src/style/style.css);
 
-:root {
-  --bg: #f9eed7;
-  --card: #d8b48a;
-  --card-dark: #c09163;
-  --text-main: #3b3b3b;
-  --accent: #c0581c;
-  --score-green: #37b24d;
+
+.page {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  top: 30vh;
+  left: 30vw;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-.weapon,
-.weapon:hover,
-.weapon:focus {
-  border: none;
-  background: none;
-}
 
 .weapon {
-  border-radius: 28px;
+  border-radius: 10px;
   padding: 1.75rem;
-  background: rgba(0, 0, 0, 0.06);
+  background: #07172B80;
   box-shadow: 0 14px 24px rgba(0, 0, 0, 0.08);
   transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
   cursor: pointer;
+  border: 4px ridge #D0A05C;
 }
 .weapon:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 32px rgba(0, 0, 0, 0.12);
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.weapon:focus-visible {
-  outline: 0;
-  box-shadow:
-    0 0 0 4px #ffe4b5,
-    0 0 0 8px #c45f20;
-}
-
-
-
-.page {
-  width: min(960px, 100%);
-  padding: 3rem 1.5rem 4rem;
+  box-shadow: 0 0 20px #ffe4b560;
 }
 
 .scoreboard {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 3rem;
 }
 
 .player-score,
 .computer-score {
-  background: var(--card);
-  border-radius: 18px;
-  padding: 1rem 1.5rem;
-  text-align: center;
+  
+  max-width: 120px;
+  border-radius: 10px;
+  padding: 10px 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-size: 16px;
+  font-weight: 100;
+  color: #ffe4b5;
+  border:2px solid #ffe4b550;
+  margin-top: 5vh;
 }
 
-.player-score-label,
-.computer-score-label {
-  display: block;
-  font-weight: 600;
-  color: #6b4b2d;
-}
-
-.player-score-value,
-.computer-score-value {
-  display: block;
-  font-size: 2.75rem;
-  font-weight: 600;
-}
-
-.player-score-value {
-  color: var(--score-green);
-}
-
-.computer-score-value {
-  color: var(--accent);
-}
-
-.scoreboard h2 {
-  font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: var(--accent);
-  margin: 0;
-  text-align: center;
-}
-
-.scoreboard p {
-  margin: 0.25rem 0 0;
-  font-weight: 500;
-  text-align: center;
-}
 
 .weapon-select {
-  gap: 2rem;
+  gap: 4vh;
   display: flex;
   flex-direction: column;
-  margin-bottom: 3rem;
+  margin-bottom: 6vh;
 }
 
-.weapon-select-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  text-align: left;
-}
-
-.weapon-select-header h3 {
-  margin: 0;
-  font-size: 1.9rem;
-  color: #374151;
-}
 
 .result-message {
   margin: 0;
-  font-weight: 600;
-  color: var(--accent);
-  font-size: 1.1rem;
+  font-weight: 100;
+  font-size: 24px;
 }
 
 .weapon-row {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 3vw;
 }
 
 .weapon img {
-  width: 110px;
-  height: 110px;
+  width: 8vw;
+  aspect-ratio: 1/1;
   object-fit: contain;
-}
-
-.selection {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
 }
 
 .selection-cards {
@@ -157,25 +82,25 @@
 
 .player-selection-card,
 .computer-selection-card {
-  width: 160px;
-  height: 160px;
-  background: var(--card);
-  border-radius: 999px;
-  box-shadow: inset 0 4px 16px rgba(0,0,0,0.12);
+  width: 10vw;
+  aspect-ratio: 1/1;
+  background: #D0A05C;
+  border-radius: 20px;
+  box-shadow: inset 0 -15px 10px #07172B60;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1vh;
 }
 
 .selection-card-title {
-  font-weight: 600;
-  color: #4b4b4b;
+  font-weight: 100;
+  color: #07172B;
 }
 
 .selection-card_icon {
-  font-size: 3rem;
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,32 +116,25 @@
 
 .selecton-vs {
   font-weight: 700;
-  font-size: 1.5rem;
-  color: #5b5b5b;
+  font-size: 16px;
+  color: #ffe4b5;
 }
 
 .reset-btn {
+  font-family: 'Suez One', serif;
   border: none;
-  background: var(--accent);
-  color: #fff;
-  font-weight: 600;
+  background: linear-gradient(#ffe4b5 5%, #D0A05C);
+  color: #07172B;
+  font-weight: 100;
   font-size: 1rem;
   padding: 0.75rem 2.5rem;
-  border-radius: 999px;
-  box-shadow: 0 12px 20px rgba(192, 88, 28, 0.25);
+  border-radius: 10px;
   cursor: pointer;
-  transition: transform 120ms ease, box-shadow 120ms ease;
   align-self: center;
 }
 
 .reset-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 26px rgba(192, 88, 28, 0.35);
+  box-shadow: 0 0px 15px #ffe4b560;
 }
 
-.reset-btn:focus-visible {
-  outline: 0;
-  box-shadow:
-    0 0 0 4px rgba(255, 228, 181, 0.9),
-    0 0 0 8px rgba(192, 88, 28, 0.65);
-}
