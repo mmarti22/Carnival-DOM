@@ -32,18 +32,20 @@
     <main class="game">
 
         <section class="weapon-select">
-            <h3>Elige tu Arma!</h3>
-            <div class="waepons">
-            <button class="weapon" data-choice="piedra">
-                <img src="images/piedra.png" alt="" height="100" width="100">
-
-            </button>
-            <button class="weapon" data-choice="papel">
-                <img src="images/mano.png" alt="" height="100" width="100">
-            </button>
-            <button class="weapon" data-choice="tijera">
-                <img src="images/tijeras.png" alt="" height="100" width="100">
-            </button>
+            <div class="weapon-select-header">
+                <h3>Elige tu Arma!</h3>
+                <p class="result-message" id="result-message">Haz tu jugada.</p>
+            </div>
+            <div class="weapon-row">
+                <button class="weapon" data-choice="piedra">
+                    <img src="images/piedra.png" alt="Piedra" height="100" width="100">
+                </button>
+                <button class="weapon" data-choice="papel">
+                    <img src="images/mano.png" alt="Papel" height="100" width="100">
+                </button>
+                <button class="weapon" data-choice="tijera">
+                    <img src="images/tijeras.png" alt="Tijera" height="100" width="100">
+                </button>
             </div>
         </section>
 
@@ -60,9 +62,7 @@
                     <span class="selection-card-title">CPU Chose</span>
                     <span class="selection-card_icon" id="computer-choice">🤖</span>
                 </div>
-
             </div>
-            <p class="selection-message" id="result-message">Haz tu jugada.</p>
             <button class="reset-btn" id="reset-btn" type="button">Reiniciar</button>
 
         </section>
