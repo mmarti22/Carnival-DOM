@@ -1,11 +1,10 @@
 .container {
-    max-width: 900px;
+    max-width: 100vw;
     margin: 24px auto;
     padding: 16px
 }
 
 .subtitle {
-    color: #F1E2B7;
     margin-bottom: 10px;
     background-color: #D0A05C;
 }
@@ -16,6 +15,7 @@
     align-items: center;
     margin-bottom: 10px;
     flex-wrap: wrap;
+    font-weight: 100;
 }
 
 .controls input {
@@ -23,25 +23,17 @@
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.05);
-    color: var(--text);
 }
 
 .controls button {
-    background: var(--accent);
     border: none;
-    color: white;
+    color: #0e192d;
     font-weight: bold;
     border-radius: 6px;
     padding: 8px 12px;
     cursor: pointer;
-    box-shadow: 0 0 15px var(--accent);
-    transition: 0.3s;
 }
 
-.controls button[disabled] {
-    opacity: 0.5;
-    cursor: not-allowed;
-}
 
 .game-area {
     position: relative;
@@ -57,28 +49,27 @@
     top: 30%;
     left: 19%;
     padding-left: 10%;
+    width: 60vw;
 }
 
 .game-hud {
     display: flex;
     justify-content: space-around;
-    background: rgba(255, 255, 255, 0.05);
+    background: #0e192d80;
     padding: 8px 12px;
-    border-radius: 8px;
-    font-weight: bold;
+    border-radius: 5px;
+    font-weight: 100;
     margin-bottom: 8px;
     backdrop-filter: blur(5px);
+    border: 1px solid #F1E2B7 ;
 }
 
-.hud strong {
-    color: var(--accent)
-}
 
 canvas {
     background: #0e192d;
-    border: 2px solid var(--accent);
-    border-radius: 10px;
-    box-shadow: 0 0 30px var(--accent);
+    border: 2px solid #D0A05C;
+    border-radius: 5px;
+    box-shadow: 0 0 30px #0e192d;
     cursor: none;
 }
 
@@ -92,7 +83,7 @@ canvas {
     color: #fff;
     padding: 20px 30px;
     border-radius: 12px;
-    box-shadow: 0 0 25px var(--accent);
+    box-shadow: 0 0 25px;
     text-align: center;
     transition: all 0.3s ease;
     z-index: 10;
@@ -112,9 +103,9 @@ canvas {
 }
 
 .alert button {
-    background: var(--accent2);
+    
     border: none;
-    color: #fff;
+    color: #F1E2B7;
     padding: 8px 14px;
     border-radius: 8px;
     cursor: pointer;
@@ -128,7 +119,8 @@ canvas {
 
 .instructions {
     margin-top: 6px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.8;
-    color: #cfefff;
+    color: #F1E2B7;
+    font-weight: 100;
 }

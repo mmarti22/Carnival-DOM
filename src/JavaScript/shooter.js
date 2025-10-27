@@ -22,21 +22,20 @@
   let running = false;
   let timerInterval = null;
 
-  const cross = { x: W / 2, y: H / 2 };
+  const cross = { x: W / 3, y: H / 3 };
   let targets = [];
 
   // 🔹 Crear contenedor para mensajes modernos
   const messageBox = document.createElement("div");
   messageBox.style.position = "absolute";
-  messageBox.style.top = "50%";
-  messageBox.style.left = "50%";
+  messageBox.style.top = "80%";
+  messageBox.style.left = "80%";
   messageBox.style.transform = "translate(-50%, -50%)";
   messageBox.style.padding = "12px 20px";
   messageBox.style.borderRadius = "8px";
   messageBox.style.background = "rgba(0, 234, 255, 0.1)";
-  messageBox.style.color = "#00eaff";
-  messageBox.style.fontWeight = "bold";
-  messageBox.style.textShadow = "0 0 10px #00eaff";
+  messageBox.style.color = "#F1E2B7";
+  messageBox.style.fontWeight = "100";
   messageBox.style.fontSize = "1.2rem";
   messageBox.style.opacity = "0";
   messageBox.style.transition = "opacity 0.4s ease";
@@ -83,18 +82,18 @@
     timeEl.textContent = timeLeft;
     roundEl.textContent = round;
     createTargets(4 + round);
-    showMessage(`🎯 Ronda ${round} iniciada`);
+    showMessage(`🎯 Round ${round} iniciada`);
     startTimer();
   }
 
   function endRound() {
     running = false;
     stopTimer();
-    showMessage(`🏁 Fin de la ronda ${round}`);
+    showMessage(`🏁 Round over! ${round}`);
     round++;
     if (round > TOTAL_ROUNDS) {
       setTimeout(() => {
-        showMessage(`🎉 ¡Juego terminado, ${playerName}! Puntuación final: ${score}`);
+        showMessage(`🎉 ¡Game end, ${playerName}! Final Score: ${score}`);
         resetAll();
       }, 1800);
     } else {
@@ -134,7 +133,7 @@
         t.alive = false;
         score += POINTS;
         scoreEl.textContent = score;
-        showMessage(`💥 +${POINTS} puntos`);
+        showMessage(`💥 +${POINTS} points`);
         return;
       }
     }
@@ -184,9 +183,9 @@
     ctx.clearRect(0, 0, W, H);
     for (const t of targets) {
       if (!t.alive) continue;
-      const grd = ctx.createRadialGradient(t.x, t.y, 5, t.x, t.y, t.r);
+      const grd = ctx.createRadialGradient(t.x, t.y, 10, t.x, t.y, t.r);
       grd.addColorStop(0, "#fff");
-      grd.addColorStop(1, "#ff4fb2");
+      grd.addColorStop(1, "#ff000dff");
       ctx.fillStyle = grd;
       ctx.beginPath();
       ctx.arc(t.x, t.y, t.r, 0, Math.PI * 2);
@@ -201,7 +200,7 @@
   function drawCrosshair() {
     const x = cross.x, y = cross.y;
     ctx.save();
-    ctx.strokeStyle = "rgba(0,234,255,0.9)";
+    ctx.strokeStyle = "#F1E2B7";
     ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.arc(x, y, 14, 0, Math.PI * 2);

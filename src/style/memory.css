@@ -37,7 +37,7 @@
 
 .memory-card:active {
   transform: scale(0.97);
-  transition: transform 0.2s;
+  transition: transform 0.3s;
 }
 
 .memory-card.flip {
@@ -46,7 +46,7 @@
 
 .memory-card.flip .front-face {
   border: 4px ridge #F1E2B7;
-  box-shadow: 0 0 15px rgba(241, 226, 183, 0.7);
+  box-shadow: 0 0 15px rgba(241, 226, 183, 0.5);
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -75,18 +75,20 @@
   display: flex;
   justify-content: space-between;
   gap: 2vw;
-  font: 600 16px/1.2 system-ui, -apple-system;
+  font: "Suez One", serif;
   color: #F1E2B7;
   position: absolute;
   top: 30vh;
   left: 29vw;
   right: auto;
   border: 1px ridge #F1E2B7;
+  padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .hud-item {
   background: rgba(0, 0, 0, 0.15);
-  padding: 10px 12px;
+  padding: 8px 12px;
   border-radius: 8px;
   border: 1px solid #F1E2B760;
 }

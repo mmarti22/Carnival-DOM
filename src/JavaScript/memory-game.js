@@ -1,8 +1,8 @@
 const COLOR_MAP = {
-  red: "#E63946",
-  blue: "#457B9D",
+  red: "#8e1a24ff",
+  blue: "#0b5e92ff",
   green: "#2A9D8F",
-  yellow: "#E9C46A",
+  yellow: "#01890870",
   pink: "#502e38ff",
   purple: "#9D4EDD",
 };
