@@ -99,7 +99,7 @@ p {
     z-index: 4;
 }
 
-.body-section-trickster{
+.body-section-trickster {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -108,7 +108,7 @@ p {
     gap: 4rem;
     z-index: 2;
     position: absolute;
-    top:30vh;
+    top: 30vh;
     left: 22.5vw;
 }
 

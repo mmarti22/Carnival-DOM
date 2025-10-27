@@ -21,7 +21,6 @@ buttonMusicTrickster.addEventListener('click', () => {
     buttonMusicText.textContent = 'Stop';
     buttonMusicTrickster.removeAttribute('id')
     buttonMusicTrickster.classList.add('buttonTrickster');
-
   } else {
     musicTrickster.pause();
     musicActive = false;
@@ -65,10 +64,10 @@ function createCards() {
     tableTrickster.appendChild(carta);
     cards.push(carta);
 
-   carta.addEventListener('click', (e) => {
-  const index = Number(e.currentTarget.dataset.indice);
-  selectCard(index);
-});
+    carta.addEventListener('click', (e) => {
+      const index = Number(e.currentTarget.dataset.indice);
+      selectCard(index);
+    });
   }
 }
 
@@ -97,7 +96,7 @@ async function visibleExchange(vuelta) {
   const a = Math.floor(Math.random() * totalCards);
   let b = Math.floor(Math.random() * totalCards);
   while (b === a) {
-  b = Math.floor(Math.random() * totalCards);
+    b = Math.floor(Math.random() * totalCards);
   }
   const c1 = cards[a];
   const c2 = cards[b];
@@ -122,7 +121,7 @@ async function visibleExchange(vuelta) {
   cards[a] = cards[b];
   cards[b] = temp;
   cards[a].dataset.indice = a;
-cards[b].dataset.indice = b;
+  cards[b].dataset.indice = b;
 
   if (indexJoker === a) indexJoker = b;
   else if (indexJoker === b) indexJoker = a;
@@ -150,7 +149,11 @@ function selectCard(i) {
 
 function updateShift() {
   turn++;
-  if (turn > 5) turn = 1;
+  if (turn > 5) {
+    turn = 1;
+
+    buttonPlayTrickster.textContent = "Play";
+  }
   updateCounterTrickster();
 }
 
@@ -162,6 +165,10 @@ buttonPlayTrickster.addEventListener('click', async () => {
   createCards();
   await showJokerBefore();
   await shuffleCards();
+
+  if (buttonPlayTrickster.textContent !== "Next") {
+    buttonPlayTrickster.textContent = "Next";
+  }
 });
 
 updateCounterTrickster();
@@ -172,7 +179,8 @@ const form = document.getElementById("nameForm");
 const nameInput = document.getElementById("nameInput");
 const greeting = document.getElementById("greeting");
 const savedName = localStorage.getItem("playerName");
-  if (savedName) {
+
+if (savedName) {
   form.style.display = "none";
   greeting.textContent = `Welcome, ${savedName}!`;
   greeting.style.fontSize = "22px";

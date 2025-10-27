@@ -22,11 +22,10 @@
             <p id="buttonMusicText">Play</p>
             <button id="buttonMusicTrickster"></button>
             <audio id="musicTricksterBackground" loop>
-                <source src="/src/assets/music/shooter-music.mp3"
-                    type="audio/mpeg">
+                <source src="/src/assets/music/shooter-music.mp3" type="audio/mpeg">
             </audio>
 
-             <form id="nameForm">
+            <form id="nameForm">
                 <p>Keep your score: </p>
                 <input type="text" placeholder="Introduce your name!" id="nameInput" />
                 <button id="nameBtn">Submit</button>
@@ -68,54 +67,63 @@
         </header>
 
         <section class="shooter-game-hub">
-        <section>
-      
-      
-    </header></section>
-    
-    <section class="controls">
-      <label for="playerName">Name:</label>
-      <input id="playerName" type="text" placeholder="Write your name!" />
-      <button class="strbtn" id="startBtn" disabled>Start</button>
-      <button id="resetBtn">Re-start</button>
-    </section>
+            <section>
 
-    <section class="game-area">
-      <div class="game-hud">
-        <div>Player: <strong id="displayName">—</strong></div>
-        <div>Score: <strong id="score">0</strong></div>
-        <div>Round: <strong id="round">1</strong>/5</div>
-        <div>Time: <strong id="time">30</strong>s</div>
-      </div>
 
-      <canvas id="gameCanvas" width="600" height="400" align="center"></canvas>
+                </header>
+            </section>
 
-     
+            <section class="controls">
+                <label for="playerName">Name:</label>
+                <input id="playerName" type="text" placeholder="Write your name!" />
+                <button class="strbtn" id="startBtn" disabled>Start</button>
+                <button id="resetBtn">Re-start</button>
+            </section>
 
-      <div class="instructions">
-        Move the mouse and click to shoot 🎯
-      </div>
-    </section>
-    </section>
+            <section class="game-area">
+                <div class="game-hud">
+                    <div>Player: <strong id="displayName">—</strong></div>
+                    <div>Score: <strong id="score">0</strong></div>
+                    <div>Round: <strong id="round">1</strong>/5</div>
+                    <div>Time: <strong id="time">30</strong>s</div>
+                </div>
+
+                <canvas id="gameCanvas" width="600" height="400" align="center"></canvas>
+
+
+
+                <div class="instructions">
+                    Move the mouse and click to shoot 🎯
+                </div>
+            </section>
+        </section>
     </main>
 
     <footer>
         <article>
             <h5>All Games</h5>
-            <a href="/src/pages/lucky-game.html"><p>Try your Fortune with the Gypsy!</p></a>
-            <a href="/src/pages/shooter-game.html"><p>Shoot’em Up</p></a>
-            <a href="/src/pages/trickster-game.html"><p>Find the Joker!</p></a>
+            <a href="/src/pages/lucky-game.html">
+                <p>Try your Fortune with the Gypsy!</p>
+            </a>
+            <a href="/src/pages/shooter-game.html">
+                <p>Shoot’em Up</p>
+            </a>
+            <a href="/src/pages/trickster-game.html">
+                <p>Find the Joker!</p>
+            </a>
             <p>Rock, Paper Scissor</p>
-            <a href="/src/pages/memory-game.html"><p>Memory Match</p></a>
+            <a href="/src/pages/memory-game.html">
+                <p>Memory Match</p>
+            </a>
         </article>
         <article>
-           <h5>About</h5>
+            <h5>About</h5>
             <p>AZARGame</p>
             <p>Developers</p>
             <p>Contact</p>
         </article>
     </footer>
-    
+
     <script src="/src/JavaScript/shooter.js"></script>
 </body>
 

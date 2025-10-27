@@ -26,14 +26,15 @@ nav {
     box-shadow: 5px 8px 10px #07172B80;
     margin: 0
 }
-nav a { 
+
+nav a {
     display: flex;
     color: #F1E2B7;
     text-decoration: none;
 }
 
 
-nav a:hover{
+nav a:hover {
     color: #D0A05C;
     transform: scale(1.05);
     text-shadow: 0 0 10px #F1E2B740;
@@ -61,9 +62,9 @@ hr {
     border: 1px solid #383838;
 }
 
- /* Music Button */
+/* Music Button */
 
- #buttonMusicTrickster {
+#buttonMusicTrickster {
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
@@ -75,11 +76,11 @@ hr {
     margin: auto;
     margin-left: 10px;
     color: #F1E2B7;
-    transition:0.3s ease;
- }
+    transition: 0.3s ease;
+}
 
 
- .buttonMusicTrickster {
+.buttonMusicTrickster {
     width: 0;
     height: 0;
     border-top: 10px solid transparent;
@@ -91,12 +92,12 @@ hr {
     margin: auto;
     margin-left: 10px;
     color: #F1E2B7;
-    transition:0.3s ease;
- }
+    transition: 0.3s ease;
+}
 
 .buttonTrickster {
     transform: scale(1.08);
-    transition:0.3s ease;
+    transition: 0.3s ease;
     width: 15px;
     height: 15px;
     background-color: #F1E2B7;
@@ -111,10 +112,10 @@ hr {
     margin: auto 0;
 }
 
-form{
+form {
     margin-left: auto;
     margin-right: 50px;
-    margin-top:auto;
+    margin-top: auto;
     margin-bottom: auto;
     background-color: #383838;
     align-items: center;
@@ -436,7 +437,7 @@ h3 {
     box-shadow: 0px 8px 10px #000000;
     object-fit: cover;
     border: 2px ridge #D0A05C;
-    
+
 }
 
 .gamesgallery img:hover {
@@ -445,7 +446,7 @@ h3 {
     transition: 0.2s ease;
 
 }
- 
+
 .gamesgallery h4 {
     font-weight: 100;
     text-decoration: none;
@@ -454,6 +455,7 @@ h3 {
 .gamesgallery h4:hover {
     text-shadow: 0px 0px 20px #F1E2B780;
 }
+
 .gamesgallery a {
     text-decoration: none;
     color: #F1E2B7;
@@ -468,8 +470,8 @@ footer {
     flex-wrap: nowrap;
     margin: auto;
     padding: 2vh;
-    
-}  
+
+}
 
 footer h5 {
     margin-top: 5vh;
@@ -492,4 +494,3 @@ footer p {
     font-size: 14px;
     font-weight: 100;
 }
-
