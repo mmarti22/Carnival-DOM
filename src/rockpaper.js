@@ -11,10 +11,10 @@ const resetBtn = document.getElementById('reset-btn');
 let playerScore = 0;
 let computerScore = 0;
 
-const icons = {
-  piedra: '✊',
-  papel: '✋',
-  tijera: '✌️',
+const choiceImages = {
+  piedra: 'src/img/rock.png',
+  papel: 'src/img/paper.png',
+  tijera: 'src/img/scissor.png',
 };
 
 
@@ -40,8 +40,8 @@ function playRound(playerChoice) {
   const computerChoice = getComputerChoice();
   const result = getRoundResult(playerChoice, computerChoice);
 
-  playerChoiceEl.textContent = icons[playerChoice];
-  computerChoiceEl.textContent = icons[computerChoice];
+  playerChoiceEl.innerHTML = `<img src="${choiceImages[playerChoice]}" alt="${playerChoice}" />`;
+  computerChoiceEl.innerHTML = `<img src="${choiceImages[computerChoice]}" alt="${computerChoice}" />`;
 
   if (result === 'player') {
     playerScore += 1;
