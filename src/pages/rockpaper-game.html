@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" href="/src/style/rockpaper.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="/index.html">
+                <img class="logo" src="/src/assets/img/logo-carnival-games.png">
+                <h1>Carnival Games</h1>
+            </a>
+            <hr>
+            <p id="buttonMusicText">Play</p>
+            <button id="buttonMusicTrickster"></button>
+            <audio id="musicTricksterBackground" loop>
+                <source src="/src/assets/music/Rock-paper-scissors-music.mp3" type="audio/mpeg">
+            </audio>
+
+            <form id="nameForm">
+                <p>Keep your score: </p>
+                <input type="text" placeholder="Introduce your name!" id="nameInput" />
+                <button id="nameBtn">Submit</button>
+            </form>
+            <div id="greeting" class="greeting"></div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="side-decor">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+
+        <h2> Rock, Paper, Scissors </h2>
+        <section class="banner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        </header>
+
+        <div class="page">
+        
+        <h3>Let's Play!</h3>
+        <section class="game">
+
+            <section class="weapon-select">
+                <div class="weapon-select-header">
+
+                    <p class="result-message" id="result-message">Make your move.</p>
+                </div>
+                <div class="weapon-row">
+                    <button class="weapon" data-choice="piedra">
+                        <img src="src/img/rock.png" alt="Piedra" height="100" width="100">
+                    </button>
+                    <button class="weapon" data-choice="papel">
+                        <img src="src/img/paper.png" alt="Papel" height="100" width="100">
+                    </button>
+                    <button class="weapon" data-choice="tijera">
+                        <img src="src/img/scissor.png" alt="Tijera" height="100" width="100">
+                    </button>
+                </div>
+            </section>
+
+            <section class="selection">
+                <div class="selection-cards">
+                    <div class="player-selection-card">
+                        <span class="selection-card-title">You Chose</span>
+                        <span class="selection-card_icon" id="player-choice">?</span>
+
+                    </div>
+                    <span class="selecton-vs">VS</span>
+
+                    <div class="computer-selection-card">
+                        <span class="selection-card-title">CPU Chose</span>
+                        <span class="selection-card_icon" id="computer-choice">🤖</span>
+                    </div>
+                </div>
+                <button class="reset-btn" id="reset-btn" type="button">Re-Start</button>
+
+            </section>
+            <section class="scoreboard">
+
+                <div class="player-score">
+                    <span class="player-score-label">Player:</span>
+                    <span class="player-score-value">0</span>
+                </div>
+
+                
+                    
+
+                <div class="computer-score">
+                    <span class="computer-score-label">Computer:</span>
+                    <span class="computer-score-value">0</span>
+                </div>
+
+            </section>
+
+        </section>
+        </div>
+</div>
+    </main>
+
+
+    <footer>
+        <article>
+            <h5>All Games</h5>
+            <a href="/src/pages/lucky-game.html">
+                <p>Try your Fortune with the Gypsy!</p>
+            </a>
+            <a href="/src/pages/shooter-game.html">
+                <p>Shoot’em Up</p>
+            </a>
+            <a href="/src/pages/trickster-game.html">
+                <p>Find the Joker!</p>
+            </a>
+            <p>Rock, Paper Scissor</p>
+            <a href="/src/pages/memory-game.html">
+                <p>Memory Match</p>
+            </a>
+        </article>
+        <article>
+            <h5>About</h5>
+            <p>AZARGame</p>
+            <p>Developers</p>
+            <p>Contact</p>
+        </article>
+    </footer>
+    <script src="/src/JavaScript/rockpaper.js"></script>
+</body>
+
+</html>
