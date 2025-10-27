@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnival-DOM</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+<body class="rockpaper">
+    
+    <div class="page">
+
+    <header class="scoreboard">
+
+        <div class="player-score">
+            <span class="player-score-label">Player:</span>
+            <span class="player-score-value">0</span>
+        </div>
+
+        <div class="scoreboard-title">
+            <h2>Piedra, Papel y Tijera</h2>
+            <p>Vamos a Jugar!</p>
+        </div>
+        
+        <div class="computer-score">
+            <span class="computer-score-label">Computer:</span>
+            <span class="computer-score-value">0</span>
+        </div>
+
+    </header>
+
+    <main class="game">
+
+        <section class="weapon-select">
+            <div class="weapon-select-header">
+                <h3>Elige tu Arma!</h3>
+                <p class="result-message" id="result-message">Haz tu jugada.</p>
+            </div>
+            <div class="weapon-row">
+                <button class="weapon" data-choice="piedra">
+                    <img src="../assets/img/rock.png" alt="Rock" height="100" width="100">
+                </button>
+                <button class="weapon" data-choice="papel">
+                    <img src="../assets/img/paper.png" alt="Paper" height="100" width="100">
+                </button>
+                <button class="weapon" data-choice="tijera">
+                    <img src="../assets/img/scissor.png" alt="scissor" height="100" width="100">
+                </button>
+            </div>
+        </section>
+
+        <section class="selection">
+            <div class="selection-cards">
+                <div class="player-selection-card">
+                    <span class="selection-card-title">You Chose</span>
+                    <span class="selection-card_icon" id="player-choice">?</span>
+
+                </div>
+                <span class="selecton-vs">VS</span>
+
+                <div class="computer-selection-card">
+                    <span class="selection-card-title">CPU Chose</span>
+                    <span class="selection-card_icon" id="computer-choice">🤖</span>
+                </div>
+            </div>
+            <button class="reset-btn" id="reset-btn" type="button">Reiniciar</button>
+
+        </section>
+
+    </main>
+    </div>
+
+<script src="../JavaScript/rockpaper.js"></script>
+</body>
+</html>
