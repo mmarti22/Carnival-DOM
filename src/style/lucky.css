@@ -11,21 +11,22 @@
     flex-direction: row;
     flex-wrap: wrap; 
     position: absolute;
-    top:35%;
-    left: 20%;
+    top:35vh;
+    left: 20vw;
 }
 
 .fortune-pic {
     max-width: 500px;
     width: auto;
+    margin-right: 3vw;
 }
 
 .btnfortune { 
     cursor: pointer;
     transition: 0,3;
     position: absolute;
-    top: 67%;
-    left: 39%;
+    top: 23.9rem;
+    left: 12.1rem;
     background-color: #f8d5fa; 
     color: #07172B; 
     border: 2px ridge #D0A05C;
@@ -52,23 +53,23 @@
 
 .advice-card {
     position: absolute;
-    top: 40%;
-    left: 100%;
+    top: 25vh;
+    left: 33vw;
     width: 500px;
-    filter: drop-shadow(0 0 0.75rem #D0A05C70);
+    filter: drop-shadow(0 0 0.75rem #D0A05C50);
    
 }
 
 .papiro-advice {
-    max-width: 100%; 
+    max-width: 30vw; 
     z-index: 3;
 }    
 
 .advice  {
     z-index: 4;
     position: absolute;
-    top: 40%;
-    left: 45%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     transition: 2s ease;
     width: 60%;
@@ -76,7 +77,8 @@
     text-align: center;
     font-weight: bold;
     font-size: 22px;
-    color: #D0A05C;  
+    color: #D0A05C;
+    margin: 0;  
 }
 
 .animate {

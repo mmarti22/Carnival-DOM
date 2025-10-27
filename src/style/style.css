@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
-@import url(/src/style/lucky.css);
-@import url(/src/style/tickster.css);
-@import url(/src/style/shooter.css);
-@import url(/src/style/memory.css);
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+@import url(lucky.css);
+@import url(tickster.css);
+@import url(shooter.css);
+@import url(memory.css);
+
+
+
+
 
 body {
     font-family: "Suez One", serif;
@@ -15,9 +21,10 @@ body {
 nav {
     display: flex;
     background-color: #1F1F1F;
-    width: 100vw;
+    width: 99vw;
     height: 50px;
-    box-shadow: 5px 8px 10px #07172B80
+    box-shadow: 5px 8px 10px #07172B80;
+    margin: 0
 }
 nav a { 
     display: flex;
@@ -104,8 +111,6 @@ hr {
     margin: auto 0;
 }
 
-
-
 form{
     margin-left: auto;
     margin-right: 50px;
@@ -156,7 +161,7 @@ form button {
 .side-decor div:nth-last-of-type(2) {
     justify-self: star;
     height: 120vh;
-    width: 5%;
+    width: 5vw;
     background: linear-gradient(#E4D9BB, #D0A05C);
     margin-left: auto;
     z-index: -1;
@@ -164,15 +169,14 @@ form button {
 
 .side-decor div:nth-last-of-type(3) {
     height: 120vh;
-    width: 5%;
+    width: 5vw;
     background: linear-gradient(#E4D9BB, #D0A05C);
     z-index: -1;
 }
 
 .side-decor div:nth-last-of-type(4) {
-    justify-self: star;
     height: 120vh;
-    width: 5%;
+    width: 5vw;
     background: linear-gradient(#C22127, #5C1012);
     z-index: -1;
 }
@@ -197,7 +201,7 @@ h2 {
 .banner div:nth-last-of-type(1) {
     background: linear-gradient(#C22127, #5C1012);
     height: 30vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 10%;
@@ -210,7 +214,7 @@ h2 {
 .banner div:nth-last-of-type(2) {
     background: linear-gradient(#E4D9BB, #D0A05C);
     height: 25vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 15%;
@@ -223,7 +227,7 @@ h2 {
 .banner div:nth-last-of-type(3) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 20%;
@@ -236,7 +240,7 @@ h2 {
 .banner div:nth-last-of-type(4) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 25%;
@@ -249,7 +253,7 @@ h2 {
 .banner div:nth-last-of-type(5) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 30%;
@@ -262,7 +266,7 @@ h2 {
 .banner div:nth-last-of-type(6) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 35%;
@@ -275,7 +279,7 @@ h2 {
 .banner div:nth-last-of-type(7) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 40%;
@@ -288,7 +292,7 @@ h2 {
 .banner div:nth-last-of-type(8) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5.1%;
+    width: 5.1vw;
     position: absolute;
     top: 40px;
     left: 45%;
@@ -301,7 +305,7 @@ h2 {
 .banner div:nth-last-of-type(9) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 50%;
@@ -314,7 +318,7 @@ h2 {
 .banner div:nth-last-of-type(10) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 55%;
@@ -327,7 +331,7 @@ h2 {
 .banner div:nth-last-of-type(11) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 60%;
@@ -340,7 +344,7 @@ h2 {
 .banner div:nth-last-of-type(12) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 65%;
@@ -353,7 +357,7 @@ h2 {
 .banner div:nth-last-of-type(13) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 70%;
@@ -366,7 +370,7 @@ h2 {
 .banner div:nth-last-of-type(14) {
     background: linear-gradient(#C22127, #5C1012);
     height: 20vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 75%;
@@ -379,7 +383,7 @@ h2 {
 .banner div:nth-last-of-type(15) {
     background: linear-gradient(#E4D9BB, #D0A05C);
     height: 25vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 80%;
@@ -392,7 +396,7 @@ h2 {
 .banner div:nth-last-of-type(16) {
     background: linear-gradient(#C22127, #5C1012);
     height: 30vh;
-    width: 5%;
+    width: 5vw;
     position: absolute;
     top: 40px;
     left: 85%;
@@ -404,8 +408,8 @@ h2 {
 
 h3 {
     position: absolute;
-    top: 39%;
-    left: 16%;
+    top: 40vh;
+    left: 20vw;
     font-weight: 100;
     font-size: 24px;
 }
@@ -419,14 +423,15 @@ h3 {
     width: max-content;
     gap: 3%;
     position: absolute;
-    top: 50%;
-    left: 16%;
+    top: 50vh;
+    left: 20vw;
+    margin: auto;
 }
 
 
 .gamesgallery img {
-    height: 185px;
-    width: 185px;
+    height: 22vh;
+    aspect-ratio: 1/1;
     border-radius: 10px;
     box-shadow: 0px 8px 10px #000000;
     object-fit: cover;

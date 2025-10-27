@@ -6,8 +6,9 @@
 }
 
 .subtitle {
-    color: #a9d7ff;
+    color: #F1E2B7;
     margin-bottom: 10px;
+    background-color: #D0A05C;
 }
 
 .controls {
@@ -38,11 +39,6 @@
     transition: 0.3s;
 }
 
-.controls button:hover {
-    background: #00ffff;
-    box-shadow: 0 0 25px #00ffff;
-}
-
 .controls button[disabled] {
     opacity: 0.5;
     cursor: not-allowed;
@@ -53,7 +49,7 @@
     display: inline-block;
 }
 
-.game-hub {
+.shooter-game-hub {
     flex-direction: column;
     align-items: center;
     gap: 40px;
@@ -64,7 +60,7 @@
     padding-left: 10%;
 }
 
-.hud {
+.game-hud {
     display: flex;
     justify-content: space-around;
     background: rgba(255, 255, 255, 0.05);

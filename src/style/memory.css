@@ -1,28 +1,27 @@
 @import url(/src/style/style.css);
-* {
-  box-sizing: border-box;
-}
+
 
 .memory-game {
-  width: 470px;
-  height: 470px;
-  margin: auto;
-  display: flex;
+  width: 60vw;
+  height: 53vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  row-gap: 1vh;
+  column-gap: 0.5vw;
   z-index: 2;
   position: absolute;
-  top: 30%;
-  left: 19%;
+  top: 42vh;
+  left: 20vw;
 }
 
 .memory-card {
   box-sizing: border-box;
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
+  width: 8vw;
+  height: 22vh;
   margin: 5px;
   position: relative;
   transform: scale(1);
@@ -46,7 +45,7 @@
 }
 
 .memory-card.flip .front-face {
-  border: 4px solid #F1E2B7;
+  border: 4px ridge #F1E2B7;
   box-shadow: 0 0 15px rgba(241, 226, 183, 0.7);
   transition: border 0.3s ease, box-shadow 0.3s ease;
 }
@@ -58,27 +57,38 @@
   border-radius: 8px;
   backface-visibility: hidden;
   transition: background-color 0.3s ease;
+  border: 4px ridge #D0A05C;
 }
-
+ 
 .front-face {
   transform: rotateY(180deg);
 }
 
+.back-face:hover {
+  box-shadow: 0 0 10px #F1E2B760;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
 .hud {
-  width: 640px;
-  margin: 20px auto 0;
+  width: 40vw;
   display: flex;
   justify-content: space-between;
-  gap: 12px;
+  gap: 2vw;
   font: 600 16px/1.2 system-ui, -apple-system;
-  color: #fff;
+  color: #F1E2B7;
+  position: absolute;
+  top: 30vh;
+  left: 29vw;
+  right: auto;
+  border: 1px ridge #F1E2B7;
 }
 
 .hud-item {
   background: rgba(0, 0, 0, 0.15);
   padding: 10px 12px;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid #F1E2B760;
 }
 
 .win-message {
