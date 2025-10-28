@@ -40,8 +40,8 @@ function playRound(playerChoice) {
   const computerChoice = getComputerChoice();
   const result = getRoundResult(playerChoice, computerChoice);
 
-  playerChoiceEl.innerHTML = `<img src=${choiceImages[playerChoice]}>`;
-  computerChoiceEl.innerHTML = `<img src=${choiceImages[computerChoice]}>`;
+  playerChoiceEl.innerHTML = `<img src="${choiceImages[playerChoice]}" alt="${playerChoice} icon">`;
+  computerChoiceEl.innerHTML = `<img src="${choiceImages[computerChoice]}" alt="${computerChoice} icon">`;
 
   if (result === 'player') {
     playerScore += 1;
@@ -59,7 +59,7 @@ function playRound(playerChoice) {
 
 weaponButtons.forEach((button) => {
   button.addEventListener('click', () => {
-    const playerChoice = button.dataset.choice;
+    const playerChoice = button.dataset.choice.toLowerCase();
     playRound(playerChoice);
   });
 });
